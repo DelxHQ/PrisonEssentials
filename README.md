@@ -40,19 +40,12 @@ If you encounter Bugs do not forget to message me on Discord: DaRealAqua#1987
 - Ui Menu (YES)
 - Scoreboard (NO)
 ### Socials:
-- Discord: DaRealAqua#1987
-- Instagram: DaRealAqua
 - Xbox: DaRealAqua
 - Youtube: DaRealAqua
-
-### XeroxDevs:
-- join XeroxDevs discord server!!
-- https://discordapp.com/invite/E8FExsG
 
 ### My Mcpe Server:
 - IP: Soon
 - PORT: Soon
 - Status: Maintenance
-- Discord Server: https://discord.io/XeroxNetwork
 --------------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------------
