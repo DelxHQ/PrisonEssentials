@@ -56,9 +56,9 @@ class Main extends PluginBase{
         $this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
     }
 
-    public function onDisable(){
-        file_put_contents($this->getDataFolder() . "players.json", json_encode($this->players));
-    }
+//     public function onDisable(){
+//         file_put_contents($this->getDataFolder() . "players.json", json_encode($this->players));
+//     }
 	
 	public function translateColors($string){
 		$msg = str_replace("&1",TextFormat::DARK_BLUE,$string);
@@ -87,6 +87,8 @@ class Main extends PluginBase{
         $name = $player->getLowerCaseName();
         $this->players[$name]["rank"] = $this->getDefaultRank();
         $this->players[$name]["prestige"] = $this->getNoPrestigeTag();
+	    
+       file_put_contents($this->getDataFolder() . "players.json", json_encode($this->players));
     }
 
     public function getDefaultRank() : string{
@@ -99,6 +101,8 @@ class Main extends PluginBase{
 
     public function setRank(Player $player, string $rank) : void{
         $this->players[$player->getLowerCaseName()]["rank"] = $rank;
+      
+      file_put_contents($this->getDataFolder() . "players.json", json_encode($this->players));
     }
 
     public function getRank(Player $player) : string{
