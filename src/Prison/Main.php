@@ -165,6 +165,8 @@ class Main extends PluginBase{
                 $player->sendMessage(str_replace("{rank}", $next, $this->getConfig()->get("rankup-message")));
                 $this->getServer()->broadcastMessage(str_replace(["{name}", "{rank}"], [$player->getName(), $next], $this->getConfig()->get("rankup-broadcast")));
                 $this->getPurePerms()->getUserDataMgr()->setPermission($player, strtolower(str_replace("{rank}", $next, $this->getConfig()->get("permission"))));
+		    
+		file_put_contents($this->getDataFolder() . "players.json", json_encode($this->players));
                 return true;
             }
         }else{
@@ -181,6 +183,8 @@ class Main extends PluginBase{
                 }
                 $this->getServer()->broadcastMessage(str_replace(["{name}", "{prestige}"], [$player->getName(), $next], $this->getConfig()->get("prestige-broadcast")));
                 $this->removeAllPermissions($player->getName());
+		    
+		file_put_contents($this->getDataFolder() . "players.json", json_encode($this->players));
                 return true;
             }
         }
